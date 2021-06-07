@@ -36,12 +36,15 @@ public class Assignment2 {
 
         WebElement fleet = driver.findElement(By.xpath("//span[@class='title title-level-1']"));
         fleet.click();
+
         BrowserUtils.sleep(1);
+
         WebElement vehicle = driver.findElement(By.xpath("//span[@class='title title-level-2']"));
         vehicle.click();
 
         BrowserUtils.sleep(1);
-        Assert.assertEquals(driver.getTitle(), "Car - Entities - System - Car - Entities - System");
+
+            Assert.assertEquals(driver.getTitle(), "Car - Entities - System - Car - Entities - System");
 
         WebElement cybertekSpartan = driver.findElement(By.xpath("//table[@class='grid table-hover table table-bordered table-condensed']//td[text()='Cybertek']"));
         cybertekSpartan.click();
@@ -57,8 +60,6 @@ public class Assignment2 {
 
         WebElement eventTitle = driver.findElement(By.xpath("//input[contains(@id,'oro_calendar_event_form_title-uid')]") );
         eventTitle.sendKeys(title);
-
-
 
         WebElement saveButton = driver.findElement(By.xpath("//button[text()='Save']") );
         saveButton.click();
