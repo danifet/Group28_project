@@ -9,11 +9,11 @@ public class VYtrackUtil {
     public static void vytrackLogin(WebDriver driver){
 
         WebElement inputUsername = driver.findElement(By.xpath("//input[@id='prependedInput']"));
-        inputUsername.sendKeys("user174");
+        inputUsername.sendKeys(ConfigurationReader.getProperty("username"));
 
         //4. Enter password: “”
         WebElement inputPassword = driver.findElement(By.xpath("//input[@id='prependedInput2']"));
-        inputPassword.sendKeys("UserUser123");
+        inputPassword.sendKeys(ConfigurationReader.getProperty("password"));
 
         //5. Click to Login button
         WebElement loginButton = driver.findElement(By.xpath("//button[@type='submit']"));
